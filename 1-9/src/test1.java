@@ -5,7 +5,7 @@ public class test1 {
 		// TODO 自動生成されたメソッド・スタブ
 //		1.数字の5と9の変数を定義し、足した数字を出力しなさい。
 		int num1 = 5;
-		int num2 = 7;
+		int num2 = 9;
 		System.out.println(num1 + num2);
 		
 //		2.64ビット整数の「1111111111」を定義し2倍した値を出力しなさい。
@@ -18,7 +18,5 @@ public class test1 {
 	 
 	    ismeg = (messege == "金子さんかっこいい"); // 【条件式】
 	    System.out.println(ismeg);
-
 	}
-
 }
