@@ -39,8 +39,8 @@ Webサイトなどのサーバーが処理できないほどの大量のアク�
 
 
 ⑩JavaでSQLインジェクションを対策する場合どのような方法がありますか？（3つ以上上げなさい）
-1. Statement から PreparedStatementへの変更
-2. Connection#createStatement から Connection#prepareStatement への変更
-3. Connection#prepareStatement の引数にSQLを渡す
-4. パラメータ・プレースホルダーを設定する
-5. 設定したプレースホルダーにパラメータを割り当てる
+1.安全なWebアプリケーションを開発する
+(プレースホルダを利用する,エスケープ処理を行う,アプリケーションに渡されるパラメータにSQL文を直接指定しない,適切な権限管理を行う)
+2. WordPressといったCMSなど、システムとして導入されているWebアプリケーションを最新バージョンにする
+3. 定期的にWebアプリケーションの脆弱性診断を行う
+4. WAFを導入する
