@@ -38,13 +38,8 @@ public class test1 {
 		
 		//問題4:この配列"numd"をコピーした配列名"new_numd"を作り"new_numd"の中身を出力してください。
 		int[] numd = {1, 3, 5, 7, 9};
-		int[] new_numd = new int[5];
-	       // array01をarray02に複製する
-	       System.arraycopy(numd, 0, new_numd, 0, 5);
-	       // 配列の全要素出力
-	       for (int new_numddata: new_numd){
-	           System.out.println(new_numddata);
-	      }
+		int[] new_numd = numd.clone(); 
+        System.out.println(Arrays.toString(new_numd));
 		
 		//改行
 		System.out.println("問５");
@@ -59,11 +54,10 @@ public class test1 {
 		
 		//問題6:配列"numf"に要素を1つ(10)追加した配列"new_numf"を作成し出力しなさい。
 		int[] numf = {1, 3, 5, 7, 9};
-	    int[] new_numf = Arrays.copyOf(numf, numf.length + 1);
-	      new_numf[new_numf.length - 1] = 10;
-	      for (int data : new_numf) {
-	          System.out.println(data);	
-	      }
+		int[] new_numf = Arrays.copyOf(numf, numf.length + 1);
+        new_numf[new_numf.length - 1] = 10;
+        System.out.println(Arrays.toString(new_numf));
+        
 		//改行
 		System.out.println("問７");
 		
@@ -78,7 +72,7 @@ public class test1 {
 		
 		//問題8:Map"car"の「キー："toyota"」のバリューを出力してください。
 		String value = car.get("toyota");
-		System.out.println(value); // "トヨタ"が出力される
+		System.out.println(value); 
 		
 		//改行
 		System.out.println("問９");
