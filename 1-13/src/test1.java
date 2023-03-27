@@ -14,31 +14,31 @@ public class test1 {
         List<String> strArray3 = new ArrayList<>();
         List<String> strArray4 = new ArrayList<>();
 
-        for (int i = 0; i < strArray1.size() - 4; i++) {
-            String str = strArray1.get(i);
-            if (str.equals("k")) {
-                strArray2.clear();
-                for (int j = i + 1; j < strArray1.size() - 3; j++) {
-                    String str2 = strArray1.get(j);
-                    if (str2.equals("a")) {
-                        strArray3.clear();
-                        for (int k = j + 1; k < strArray1.size() - 2; k++) {
-                            String str3 = strArray1.get(k);
-                            if (str3.equals("k")) {
-                                strArray3.add(str3);
-                            }
-                        }
-                        if (!strArray3.isEmpty()) {
-                            String str4 = strArray1.get(j + 6);
-                            if (str4.equals("a") || str4.equals("o")) {
-                                strArray4.add(str + str2 + strArray3.get(0) + str2 + str4);
-                            }
-                        }
+        for (int i = 2; i < strArray1.size() ; i++) {
+        	strArray2.add(strArray1.get(i));
+                for (int j = 0; j < strArray2.size(); j++) {
+                    if (strArray2.get(j) == "k" || strArray2.get(j) == "a" || strArray2.get(j) == "o") {
+                    	strArray3.add(strArray2.get(j));
                     }
-                }
-            }
+                        for (int k = 0; k < strArray3.size(); k++) {
+                        	if(strArray4.size() == 0 && strArray3.get(k) == "k") {
+                        		strArray4.add(strArray3.get(k));
+                        	}else if(strArray4.size() == 1 && strArray3.get(k) == "a") {
+                        		strArray4.add(strArray3.get(k));
+                        	}else if(strArray4.size() == 2 && strArray3.get(k) == "k") {
+                        		strArray4.add(strArray3.get(k));
+                        	}else if(strArray4.size() == 3 && strArray3.get(k) == "a") {
+                        		strArray4.add(strArray3.get(k));
+                        	}else if(strArray4.size() == 4 && strArray3.get(k) == "o") {
+                        		strArray4.add(strArray3.get(k));
+                            }
+                         
+                        }
+                	}
+        	    }
+             System.out.println(strArray4);
+           
+               
         }
-
-        System.out.println(strArray4);
     }
-}
+
