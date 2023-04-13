@@ -1,0 +1,113 @@
+⚫️課題2−3
+
+
+DDL回答
+
+顧客情報テーブル
+
+create table public.customers (
+  customer_id integer not null
+  , name character varying(255)
+  , email character varying(255)
+  , phone character varying(255)
+  , primary key (customer_id)
+);
+
+comment on column customers.id is '顧客ID';
+comment on column customers.name is '顧客名';
+comment on column customers.email is 'メールアドレス';
+comment on column customers.phone is '電話番号'
+  
+
+注文情報テーブル
+
+create table public.orders (
+  order_id integer not null
+  , customer_id integer
+  , order_date date
+  , total numeric(10, 2)
+  , primary key (order_id)
+  , foreign key(customer_id) references customers(customer_id)
+);
+
+comment on column orders.order_id is '注文ID';
+comment on column orders.customer_id is '顧客ID';
+comment on column orders.order_date is '注文日';
+comment on column orders.total is '合計金額'
+
+
+製品情報テーブル
+
+create table public.products (
+  product_id integer not null
+  , name character varying(255)
+  , price numeric(10, 2)
+  , category character varying(255)
+  , primary key (product_id)
+);
+
+comment on column products.product_id is '製品ID';
+comment on column products.name is '製品名';
+comment on column products.price is '価格';
+comment on column products.category is 'カテゴリ'
+
+
+注文アイテムテーブル
+
+create table public.order_items (
+  order_id integer not null
+  , product_id integer not null
+  , quantity integer
+  , price numeric(10, 2)
+  , primary key (order_id, product_id)
+  , foreign key(product_id) references products(product_id)
+);
+
+comment on column order_items.order_id is '注文ID';
+comment on column order_items.product_id is '製品ID';
+comment on column order_items.quantity is '数量';
+comment on column order_items.price is '価格'
+
+
+DML回答
+
+顧客情報テーブル
+
+insert into customers(customer_id, name, email, phone)
+values
+(1, '山田太郎', 'yamada@example.com', '012-3456-7890'),
+(2, '田中花子', 'tanaka@example.com', '090-1234-5678'),
+(3, '鈴木次郎', 'suzuki@example.com', '080-8765-4321')
+
+
+注文情報テーブル
+
+insert into orders(order_id, customer_id, order_date, total)
+values
+(1, 1, '2022/1/1', 160000),
+(2, 1, '2022/2/1', 240000),
+(3, 2, '2022/3/1', 120000),
+(4, 3, '2022/4/2', 100000)
+
+
+製品情報テーブル
+
+insert into products(product_id, name, price, category)
+values
+(1, 'iPhone12', 80000, 'スマートフォン'),
+(2, 'iPad Pro', 120000, 'タブレット'),
+(3, 'MacBook Pro', 200000, 'パソコン'),
+(4, 'エアコン', 50000, '家電'),
+(5, 'テレビ', 100000, '家電')
+
+
+注文アイテムテーブル
+
+insert into order_items(order_id, product_id, quantity, price)
+values
+(1, 1, 2, 80000),
+(2, 3, 1, 200000),
+(2, 4, 1, 50000),
+(2, 5, 2, 200000),
+(3, 2, 1, 120000),
+(4, 4, 2, 100000)
