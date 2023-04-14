@@ -61,12 +61,19 @@ create table public.order_items (
   , price numeric(10, 2)
   , primary key (order_id, product_id)
   , foreign key(product_id) references products(product_id)
+  , foreign key(order_id) references orders(order_id)
 );
 
 comment on column order_items.order_id is '注文ID';
 comment on column order_items.product_id is '製品ID';
 comment on column order_items.quantity is '数量';
 comment on column order_items.price is '価格'
+
+
+comment on table customers is '顧客管理'
+comment on table orders is '製品情報'
+comment on table products is '製品情報'
+comment on table order_items is '注文アイテム'
 
 
 DML回答
