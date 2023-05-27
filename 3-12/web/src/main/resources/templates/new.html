@@ -31,6 +31,34 @@
              <input type="text" name="age" th:field="*{age}">
              <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" style = color:red></span>
        	</div> 
+       	
+       	<div class="date">
+             <label for="date">日付</label><br>
+             <input type="date" name="date" th:field="*{date}">
+             <span th:if="${#fields.hasErrors('date')}" th:errors="*{date}" style = color:red></span>
+       	</div>
+       	
+       	
+       	<select name="gender_id">
+    	<!-- th:eachでcolorsの要素分ループをまわす -->
+    	<!-- th:selectedで初期の選択値を指定する -->
+    	<option
+      		th:each="gender : ${gender}"
+      		th:value="${gender.key}"
+      		th:text="${gender.value}">
+    	</option>
+  		</select>
+  		
+  		<select name="blood_type_id">
+    	<!-- th:eachでcolorsの要素分ループをまわす -->
+    	<!-- th:selectedで初期の選択値を指定する -->
+    	<option
+      		th:each="bloodtype : ${bloodtype}"
+      		th:value="${bloodtype.key}"
+      		th:text="${bloodtype.value}">
+    	</option>
+  		</select>	
+       	
       </div> 	
         <input type="submit" class="footer1" value="作成"/>
     </form>
