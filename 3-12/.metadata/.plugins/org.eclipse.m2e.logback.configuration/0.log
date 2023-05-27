@@ -397,3 +397,4 @@
 2023-05-27 19:38:43,146 [Worker-5: ビルド] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-05-27 19:38:43,146 [Worker-5: ビルド] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2023-05-27 19:38:43,147 [Worker-5: ビルド] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/katsumatayuusuke/git/JavaStudy/web/src/test/resources
+2023-05-27 19:40:15,670 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
