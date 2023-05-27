@@ -1,0 +1,1441 @@
+!SESSION 2022-07-23 00:07:56.458 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 4 567 2022-07-23 00:08:05.313
+!MESSAGE ワークスペースは復元されましたが、問題が発生しました。
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2022-07-23 00:08:05.313
+!MESSAGE '.org.eclipse.egit.core.cmp' のメタデータを読み取れませんでした。
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:895)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:875)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:731)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2547)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2252)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:525)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:499)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.ui.ide.IDE.registerAdapters(IDE.java:1787)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.initialize(IDEWorkbenchAdvisor.java:206)
+	at org.eclipse.ui.application.WorkbenchAdvisor.internalBasicInitialize(WorkbenchAdvisor.java:171)
+	at org.eclipse.ui.internal.Workbench$18.runWithException(Workbench.java:1616)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5211)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1612)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2759)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:637)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2022-07-23 00:08:05.315
+!MESSAGE '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+!STACK 0
+java.lang.Exception: '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:908)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:895)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:875)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:731)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2547)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2252)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:525)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:499)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:810)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1032)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:397)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:496)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.ui.ide.IDE.registerAdapters(IDE.java:1787)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.initialize(IDEWorkbenchAdvisor.java:206)
+	at org.eclipse.ui.application.WorkbenchAdvisor.internalBasicInitialize(WorkbenchAdvisor.java:171)
+	at org.eclipse.ui.internal.Workbench$18.runWithException(Workbench.java:1616)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:36)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5211)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:94)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1612)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2759)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:637)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 2 2 2022-07-23 00:21:12.524
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2023-05-26 01:39:27.438 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-05-26 01:40:31.537
+!MESSAGE Process returned with error code "139".
+Command line arguments: /Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw -Xmx16m -classpath /Applications/Eclipse_2022-06.app/Contents/Eclipse/configuration/org.eclipse.osgi/207/0/.cp/lib/launchingsupport.jar org.eclipse.jdt.internal.launching.support.LibraryDetector
+Output: Standard output:
+
+Standard error:
+/Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw: line 18: 91233 Segmentation fault: 11  $JHOME/bin/java -Djava.ext.dirs=$JHOME/lib/ext "$@"
+
+!STACK 0
+java.lang.IllegalStateException: Process returned with error code "139".
+Command line arguments: /Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw -Xmx16m -classpath /Applications/Eclipse_2022-06.app/Contents/Eclipse/configuration/org.eclipse.osgi/207/0/.cp/lib/launchingsupport.jar org.eclipse.jdt.internal.launching.support.LibraryDetector
+Output: Standard output:
+
+Standard error:
+/Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw: line 18: 91233 Segmentation fault: 11  $JHOME/bin/java -Djava.ext.dirs=$JHOME/lib/ext "$@"
+
+	at org.eclipse.jdt.internal.launching.StandardVMType.checkProcessResult(StandardVMType.java:928)
+	at org.eclipse.jdt.internal.launching.StandardVMType.generateLibraryInfo(StandardVMType.java:730)
+	at org.eclipse.jdt.internal.launching.StandardVMType.getLibraryInfo(StandardVMType.java:240)
+	at org.eclipse.jdt.internal.launching.StandardVMType.getDefaultLibraryLocations(StandardVMType.java:457)
+	at org.eclipse.jdt.internal.launching.StandardVMType.canDetectDefaultSystemLibraries(StandardVMType.java:267)
+	at org.eclipse.jdt.internal.launching.StandardVMType.validateInstallLocation(StandardVMType.java:663)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.addVM(VMDefinitionsContainer.java:139)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.populateVMForType(VMDefinitionsContainer.java:561)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.populateVMTypes(VMDefinitionsContainer.java:497)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.parseXMLIntoContainer(VMDefinitionsContainer.java:476)
+	at org.eclipse.jdt.launching.JavaRuntime.addPersistedVMs(JavaRuntime.java:1952)
+	at org.eclipse.jdt.launching.JavaRuntime.initializeVMs(JavaRuntime.java:3206)
+	at org.eclipse.jdt.launching.JavaRuntime.getVMInstallTypes(JavaRuntime.java:570)
+	at org.eclipse.jdt.internal.launching.JREPreferenceModifyListener.preApply(JREPreferenceModifyListener.java:132)
+	at org.eclipse.core.internal.preferences.PreferencesService$4.run(PreferencesService.java:453)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:456)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:125)
+	at org.eclipse.core.internal.resources.ProjectPreferences.read(ProjectPreferences.java:215)
+	at org.eclipse.core.internal.resources.ProjectPreferences.updatePreferences(ProjectPreferences.java:343)
+	at org.eclipse.core.internal.resources.File.updateMetadataFiles(File.java:387)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.visit(RefreshLocalVisitor.java:306)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:119)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:978)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:961)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1573)
+	at org.eclipse.core.internal.resources.File.refreshLocal(File.java:316)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:228)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-05-26 01:40:31.541
+!MESSAGE Failed to retrieve default libraries for /Applications/Eclipse_2022-06.app/Contents/java/6/Home
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-05-26 01:40:31.771
+!MESSAGE Process returned with error code "139".
+Command line arguments: /Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw -Xmx16m -classpath /Applications/Eclipse_2022-06.app/Contents/Eclipse/configuration/org.eclipse.osgi/207/0/.cp/lib/launchingsupport.jar org.eclipse.jdt.internal.launching.support.LibraryDetector
+Output: Standard output:
+
+Standard error:
+/Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw: line 18: 91241 Segmentation fault: 11  $JHOME/bin/java -Djava.ext.dirs=$JHOME/lib/ext "$@"
+
+!STACK 0
+java.lang.IllegalStateException: Process returned with error code "139".
+Command line arguments: /Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw -Xmx16m -classpath /Applications/Eclipse_2022-06.app/Contents/Eclipse/configuration/org.eclipse.osgi/207/0/.cp/lib/launchingsupport.jar org.eclipse.jdt.internal.launching.support.LibraryDetector
+Output: Standard output:
+
+Standard error:
+/Applications/Eclipse_2022-06.app/Contents/java/6/Home/bin/javaw: line 18: 91241 Segmentation fault: 11  $JHOME/bin/java -Djava.ext.dirs=$JHOME/lib/ext "$@"
+
+	at org.eclipse.jdt.internal.launching.StandardVMType.checkProcessResult(StandardVMType.java:928)
+	at org.eclipse.jdt.internal.launching.StandardVMType.generateLibraryInfo(StandardVMType.java:730)
+	at org.eclipse.jdt.internal.launching.StandardVMType.getLibraryInfo(StandardVMType.java:243)
+	at org.eclipse.jdt.internal.launching.StandardVMType.getDefaultLibraryLocations(StandardVMType.java:457)
+	at org.eclipse.jdt.internal.launching.StandardVMType.canDetectDefaultSystemLibraries(StandardVMType.java:267)
+	at org.eclipse.jdt.internal.launching.StandardVMType.validateInstallLocation(StandardVMType.java:663)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.addVM(VMDefinitionsContainer.java:139)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.populateVMForType(VMDefinitionsContainer.java:561)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.populateVMTypes(VMDefinitionsContainer.java:497)
+	at org.eclipse.jdt.internal.launching.VMDefinitionsContainer.parseXMLIntoContainer(VMDefinitionsContainer.java:476)
+	at org.eclipse.jdt.launching.JavaRuntime.addPersistedVMs(JavaRuntime.java:1952)
+	at org.eclipse.jdt.launching.JavaRuntime.initializeVMs(JavaRuntime.java:3206)
+	at org.eclipse.jdt.launching.JavaRuntime.getVMInstallTypes(JavaRuntime.java:570)
+	at org.eclipse.jdt.internal.launching.JREPreferenceModifyListener.preApply(JREPreferenceModifyListener.java:132)
+	at org.eclipse.core.internal.preferences.PreferencesService$4.run(PreferencesService.java:453)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.PreferencesService.firePreApplyEvent(PreferencesService.java:456)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyPreferences(PreferencesService.java:125)
+	at org.eclipse.core.internal.resources.ProjectPreferences.read(ProjectPreferences.java:215)
+	at org.eclipse.core.internal.resources.ProjectPreferences.updatePreferences(ProjectPreferences.java:343)
+	at org.eclipse.core.internal.resources.File.updateMetadataFiles(File.java:387)
+	at org.eclipse.core.internal.localstore.RefreshLocalVisitor.visit(RefreshLocalVisitor.java:306)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:119)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:978)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:961)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1573)
+	at org.eclipse.core.internal.resources.File.refreshLocal(File.java:316)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:228)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.launching 4 4 2023-05-26 01:40:31.772
+!MESSAGE Failed to retrieve default libraries for /Applications/Eclipse_2022-06.app/Contents/java/6/Home
+
+!ENTRY org.eclipse.ui 2 2 2023-05-26 01:43:15.333
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2023-05-26 01:46:03.437 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-05-26 01:46:35.349
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.ui 4 4 2023-05-26 01:56:46.727
+!MESSAGE Could not create action delegate for id: org.springsource.ide.eclipse.commons.launch.relaunch.action
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2023-05-26 01:56:46.729
+!MESSAGE プラグイン "org.springsource.ide.eclipse.commons.ui" は、クラス "org.springsource.ide.eclipse.commons.ui.launch.RelaunchProcessPullDownToolbarDelegate" をインスタンス化できませんでした。
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:204)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:920)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:281)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:126)
+	at org.eclipse.ui.internal.WWinPluginAction.refreshActionList(WWinPluginAction.java:157)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4345)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3968)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.<init>(LaunchList.java:74)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.<init>(LiveAndDeadProcessTracker.java:77)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.getInstance(LiveAndDeadProcessTracker.java:69)
+	at org.springsource.ide.eclipse.commons.ui.launch.RelaunchProcessPullDownToolbarDelegate.createList(RelaunchProcessPullDownToolbarDelegate.java:29)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.<init>(AbstractLaunchToolbarPulldown.java:52)
+	at org.springsource.ide.eclipse.commons.ui.launch.RelaunchProcessPullDownToolbarDelegate.<init>(RelaunchProcessPullDownToolbarDelegate.java:15)
+	... 37 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.<init>(LaunchList.java:74)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.<init>(LiveAndDeadProcessTracker.java:77)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.getInstance(LiveAndDeadProcessTracker.java:69)
+	at org.springsource.ide.eclipse.commons.ui.launch.RelaunchProcessPullDownToolbarDelegate.createList(RelaunchProcessPullDownToolbarDelegate.java:29)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.<init>(AbstractLaunchToolbarPulldown.java:52)
+	at org.springsource.ide.eclipse.commons.ui.launch.RelaunchProcessPullDownToolbarDelegate.<init>(RelaunchProcessPullDownToolbarDelegate.java:15)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:204)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:920)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:281)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:126)
+	at org.eclipse.ui.internal.WWinPluginAction.refreshActionList(WWinPluginAction.java:157)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4345)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3968)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 4 2023-05-26 01:56:46.751
+!MESSAGE Could not create action delegate for id: org.springsource.ide.eclipse.commons.launch.stop.action
+!SUBENTRY 1 org.eclipse.equinox.registry 4 1 2023-05-26 01:56:46.751
+!MESSAGE プラグイン "org.springsource.ide.eclipse.commons.ui" は、クラス "org.springsource.ide.eclipse.commons.ui.launch.StopProcessPullDownToolbarDelegate" をインスタンス化できませんでした。
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:204)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:920)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:281)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:126)
+	at org.eclipse.ui.internal.WWinPluginAction.refreshActionList(WWinPluginAction.java:157)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4345)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3968)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.<init>(LaunchList.java:74)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.<init>(LiveProcessTracker.java:49)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.getInstance(LiveProcessTracker.java:43)
+	at org.springsource.ide.eclipse.commons.ui.launch.StopProcessPullDownToolbarDelegate.createList(StopProcessPullDownToolbarDelegate.java:34)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.<init>(AbstractLaunchToolbarPulldown.java:52)
+	at org.springsource.ide.eclipse.commons.ui.launch.StopProcessPullDownToolbarDelegate.<init>(StopProcessPullDownToolbarDelegate.java:18)
+	... 37 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.<init>(LaunchList.java:74)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.<init>(LiveProcessTracker.java:49)
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.getInstance(LiveProcessTracker.java:43)
+	at org.springsource.ide.eclipse.commons.ui.launch.StopProcessPullDownToolbarDelegate.createList(StopProcessPullDownToolbarDelegate.java:34)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.<init>(AbstractLaunchToolbarPulldown.java:52)
+	at org.springsource.ide.eclipse.commons.ui.launch.StopProcessPullDownToolbarDelegate.<init>(StopProcessPullDownToolbarDelegate.java:18)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:204)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:920)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:281)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:126)
+	at org.eclipse.ui.internal.WWinPluginAction.refreshActionList(WWinPluginAction.java:157)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4345)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3968)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-26 01:56:47.155
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-26 01:56:47.159
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-26 21:57:31.259
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 15:05:05.607
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 15:05:05.621
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 15:05:05.623
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 15:05:05.625
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 15:23:22.734
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 15:23:22.739
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 15:25:58.823
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 15:36:27.667
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 15:36:44.783
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 15:49:23.650
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 15:56:00.703
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:03:20.063
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:03:20.069
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:03:20.072
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:03:20.073
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:06:45.486
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:06:45.495
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:06:57.762
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:06:57.764
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:06:57.764
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:06:57.765
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:08:18.518
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:08:18.527
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:08:25.672
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:08:25.683
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:08:25.689
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:08:25.696
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:14:01.052
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:14:01.058
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:16:52.660
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:17:26.202
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:20:24.529
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:20:24.540
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:20:24.541
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:20:24.543
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:21:37.930
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:21:37.936
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:26:44.047
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:26:44.055
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:26:44.057
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:26:44.058
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:29:25.903
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:30:54.593
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:30:54.599
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:31:03.578
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:31:03.580
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:31:03.582
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:31:03.583
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:38:09.212
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:38:55.251
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:38:55.258
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:39:05.324
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:39:05.327
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:39:05.327
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:39:05.328
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:43:37.794
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 16:54:36.206
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 16:58:37.830
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 16:58:37.843
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-05-27 17:05:56.935
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:25:23.224
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:25:23.274
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:25:23.276
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:25:23.277
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:27:43.821
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:27:43.827
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:27:53.426
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:27:53.432
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedHashMap.remove(Object)" because "this.configs" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveAndDeadProcessTracker.processCreated(LiveAndDeadProcessTracker.java:94)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:27:53.436
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:27:53.437
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.contains(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processCreated(LiveProcessTracker.java:75)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:86)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2023-05-27 19:30:21.786
+!MESSAGE プラグイン "org.eclipse.debug.core" からのコードの起動で問題が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 125 2023-05-27 19:30:21.795
+!MESSAGE デバッグ・イベントのディスパッチ中に例外が発生しました。
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.LinkedList.remove(Object)" because "this.processes" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.LiveProcessTracker.processTerminated(LiveProcessTracker.java:64)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList.handleDebugEvent(LaunchList.java:91)
+	at org.springsource.ide.eclipse.commons.ui.launch.LaunchList$1.handleDebugEvents(LaunchList.java:63)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1248)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:480)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-05-27 19:38:23.350 -----------------------------------------------
+eclipse.buildId=4.24.0.I20220607-0700
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/katsumatayuusuke/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-05-27 19:38:56.324
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
