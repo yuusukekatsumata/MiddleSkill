@@ -1,0 +1,145 @@
+﻿⚫️課題5-1～5-5
+【準備】
+1.ジップファイルを保存して環境を作って整えてください
+2.pom.xmlは使用するDBで自分で切り替えてください
+3.下記SQL文を打ち込んで下さい
+
+
+3-1
+CREATE TABLE "user" (
+ id SERIAL NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  address VARCHAR(255),
+  phone VARCHAR(50),
+  update_date TIMESTAMP NOT NULL,
+  create_date TIMESTAMP NOT NULL,
+  delete_date TIMESTAMP,
+ PRIMARY KEY (id)
+);
+
+
+3-2
+INSERT INTO public."user"(
+id, name, address, phone, update_date, create_date)
+VALUES ('1', 'テスト太郎', '東京都サンプル区1-1', '080-0000-0000', '2019-05-06 12:00:00', '2019-05-01 12:00:00');
+
+
+
+
+【課題】
+①下記の6つのエラーが発生しCRAD機能とバリデーション、各画面遷移を邪魔して
+いるため修正して正常に行えるようにしてください。
+
+
+TemplateInputException
+NumberFormatException
+ClassCastException
+NullPointerException
+IndexOutOfBoundsException
+ArithmeticException
+
+
+
+
+②TemplateInputExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+UserEntity.java 
+@Column(name = "ib")
+
+
+修正内容
+ibをidに変更しました。
+
+
+原因
+コードにケアレスミスがある場合に発生します
+
+
+③NumberFormatExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+Usercontroller.java 
+  String name = new String();
+  int User =  Integer.parseInt(name);
+
+
+修正内容
+上記2行を削除しました
+
+
+原因
+文字列を数値型に変換した際に、数値以外の文字が含まれるなどして変換ができない場合に発生します
+
+
+④ClassCastExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+Usercontroller.java 
+ Integer logName = (Integer) name;
+     System.out.println("ログ出力：登録ユーザー名は"+logName);
+
+
+修正内容
+上記2行を削除しました
+
+
+原因
+クラスのキャスト（型変換）に失敗すると発生します
+→nameをInt型にしている
+
+
+⑤NullPointerExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+Usercontroller.java 
+ Object name = userRequest.getName();
+
+
+修正内容
+上記1行を削除しました
+
+
+原因
+参照型変数にnull値が格納されている時に、参照型変数を参照しようとした場合に発生します
+→userRequestの値がNullになっている。
+
+
+⑥IndexOutOfBoundsExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+Usercontroller.java
+  List<UserEntity> userlists = new ArrayList<UserEntity>(); 
+  for(int i = 0;i<userlist.size()-1;i++) {
+   userlists.add(userlist.get(-2));
+  }
+  model.addAttribute("userlist", userlists);
+
+
+修正内容
+  List<UserEntity> userlists = new ArrayList<UserEntity>(); 
+  for(int i = 0;i<userlist.size()-1;i++) {
+   userlists.add(userlist.get(-2));
+  }
+を削除
+  model.addAttribute("userlist", userlists);
+のuserlistsをuserlistに変更しました。
+
+
+原因
+コレクションの無効なインデックスにアクセスした時に発生します
+→userlist.size()-1に対してuserlist.get(-2)を取得しようとしている。
+
+
+⑦ArithmeticExceptionの原因と原因箇所と修正内容を説明してください
+原因箇所
+Usercontroller.java
+     BigDecimal id1 = new BigDecimal(10);
+     BigDecimal id2 = new BigDecimal(3);
+     BigDecimal id3 = id1.divide(id2);
+     System.out.println("IDが整数かどうか判定する："+id3);
+     userUpdateRequest = null;
+
+
+修正内容
+上記5行を削除しました
+
+
+原因：
+このエラーは数値の計算において、不正な算術処理が行われた場合に発生します
+→10割る3で割り切れない計算をしている。
